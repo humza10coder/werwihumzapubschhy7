@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Registration form</title>
+    <style>
+        body{
+            background-color: orange;
+            color:brown;
+            font-size: 30px;
+        }
+        li{
+            display: inline;
+            padding-left:30px;
+            padding-right:25px;
+        }
+        a{
+            color:white;
+        }
+        ul{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="hs.jpg" height="100" width="100">
+    <marquee direction="right"><h1>Admission Form</h1></marquee>
+    <nav>
+
+        <ul style="list-style-type: none;">
+
+            <li>
+                <a href="index.html.html">Home</a>
+            </li>
+            <li>
+                <a href="Mision nd.html">Our School</a>
+            </li>
+            <li>
+                <a href="pri.html">Academic</a>
+            </li>
+            <li>
+                <a href="ppa.html">Pre-Primary</a>
+            </li>
+            <li>
+                <a href="adn.html">Admission</a>
+            </li>
+            <li>
+                <a href="pro.html">Programmes</a>
+            </li>
+            <li>
+                <a href="cbse.html">CBSE Selection</a>
+            </li>
+            <li>
+                <a href="sports.html">Sports</a>
+            </li>
+            <li>
+                <a href="form of humza public school.html">Admission form</a>
+            </li>        
+
+        </ul>
+
+    </nav>
+    <form method="post" name="form1" onsubmit="return(humza())">
+        <label for="Fname">Name: </label>
+        <input type="text" name="Fname" placeholder="Please Enter your name here">
+        <span id="s1" style="color: red;"></span>
+        <br/>
+        <label for="EMAIL">Email: </label>
+        <input type="email" name="EMAIL" placeholder="Please Enter your email here">
+        <span id="s2" style="color: red;"></span>
+        <br/>
+        <label for="MOB">Mobile No: </label>
+        <input type="number" name="MOB" placeholder="Please Enter mobile number">
+        <span id="s3" style="color: red;"></span>
+        <br>
+        <label>Gender: </label>
+        <input type="radio" name="Gend" id="M"> Male
+        <input type="radio" name="Gend" id="F"> Female
+        <input type="radio" name="Gend" id="O"> Others
+        <span id="s4" style="color: red;"></span>
+        <br/>
+        <label for="bir">Date of Birth: </label>
+        <input type="date" name="bir">
+        <span id="s5" style="color: red;"></span>
+        <br/>
+        <label for="iop">Username: </label>
+        <input type="Username" name="iop" placeholder="Please Enter your Username">
+        <span id="s6" style="color: red;"></span>
+        <br/>
+        <label for="Pass">Password: </label>
+        <input type="password" name="Pass" placeholder="Please Enter your password">
+        <span id="s7" style="color: red;"></span>
+        <br>
+        <label for="Cpass">Confirm Password: </label>
+        <input type="password" name="Cpass" placeholder="Please Enter your Confirm password">
+        <span id="s8" style="color: red;"></span>
+        <br>
+        <br/>
+        <label for="Com">Address</label>
+        <br/>
+        <textarea rows="2" cols="10" name="Com"></textarea>
+        <span id="s9" style="color: red;"></span>
+        <br/>
+        <label for="Cop">Country: </label>
+        <select name="Cop">
+            <option value="select" selected id="COUNTRY">Select your country</option>
+
+            <option value="Italy">Italy</option>
+
+            <option value="India">India</option>
+
+            <option value="U.A.E.">U.A.E.</option>
+
+            <option value="Australia">Australia</option>
+
+            <option value="China">China</option>
+
+            <option value="U.S.A.">U.S.A.</option>
+
+        </select>
+        <span id="s10" style="color: red;"></span>
+        <br/>
+
+        <label>Hobbies: </label>
+
+        <br/>
+
+        <input type="checkbox">Sports<br/>
+
+        <input type="checkbox">Cooking<br/>
+
+        <input type="checkbox">Football<br/>
+
+        <input type="checkbox">Cricket<br/>
+
+        <input type="checkbox">Travelling<br/>
+
+        <input type="checkbox">Dancing<br/>
+
+        <input type="checkbox">Reading<br/>
+
+        <input type="checkbox">Singing<br/>
+
+        <input type="checkbox">Swimming<br/>
+
+        <label for="non">Upload Documents: </label>
+
+        <input type="file" name="non">
+        <span id="s11" style="color: red;"></span>
+        <br/>
+        <input type="reset" value="Clear">
+          <br/>
+        <button type="submit" class="btn btn-success btn-lg">Sumbit</button>
+        
+    </form>
+    <script>
+        function humza() {
+            var fname=document.form1.Fname.value;
+            if(fname=="")
+            {
+                document.getElementById("s1").innerHTML=" Warning! Please enter your name";
+                document.form1.Fname.focus();
+                return false;
+            }
+            else{
+                document.getElementById("s1").innerHTML=""
+            }
+            var e=document.form1.EMAIL.value;
+            if(e=="")
+            {
+                document.getElementById("s2").innerHTML="Please dont leave the box blank";
+                document.form1.EMAIL.focus();
+                return false;
+            }
+            else{
+                document.getElementById("s2").innerHTML=""
+            }
+            var mob=document.form1.MOB.value;
+            if(mob=="")
+            {
+                document.getElementById("s3").innerHTML="Please enter your mobile number"
+                document.form1.MOB.focus();
+                return false;
+            }
+            else if(isNaN(mob))
+            {
+                document.getElementById("s3").innerHTML="Mobile number should be number nothing else"
+                document.form1.MOB.focus();
+                return false;
+            }
+            else if(mob.length!=10)
+            {
+                document.getElementById("s3").innerHTML="Mobile number should be of 10 digits"
+                document.form1.MOB.focus();
+                return false;
+            }
+            else{
+                document.getElementById("s3").innerHTML="";
+            }
+            if(document.getElementById("M").checked)
+            {
+                document.getElementById("s4").innerHTML=""
+            }
+            else if(document.getElementById("F").checked)
+            {
+                document.getElementById("s4").innerHTML=""
+            }
+            else if(document.getElementById("O").checked)
+            {
+                document.getElementById("s4").innerHTML=""
+            }
+            else{
+                document.getElementById("s4").innerHTML="*Please select your gender"
+                return false;
+            }
+            var dob=document.form1.bir.value;
+            if(dob=="")
+            {
+                document.getElementById("s5").innerHTML="warning! plese enter your date of birth.";
+                document.form1.bir.focus();
+                return false;
+            }
+            else{
+                document.getElementById("s5").innerHTML=""
+            }
+            var u=document.form1.iop.value;
+            if(u=="")
+            {
+                document.getElementById("s6").innerHTML="Please enter your username";
+                document.form1.iop.focus();
+                return false;
+            }
+            else{
+                document.getElementById("s6").innerHTML="";
+            }
+            var p=document.form1.Pass.value;
+            if(p=="")
+            {
+                document.getElementById("s7").innerHTML="Please enter your password"
+                document.form1.Pass.focus();
+                return false;
+            }
+            else if(p.length<9)
+            {
+                document.getElementById("s7").innerHTML="Password should be more than 8 digits"
+                document.form1.Pass.focus();
+                return false;
+            }
+            else{
+                document.getElementById("s7").innerHTML="";
+            }
+            var cp=document.form1.Cpass.value;
+            if(cp=="")
+            {
+                document.getElementById("s8").innerHTML="*Please enter your confirm password";
+                document.form1.Cpass.focus();
+                return false;
+            }
+            else if(cp != p)
+            {
+                document.getElementById("s8").innerHTML="*Password and Confirm Password should match";
+                document.form1.Cpass.focus();
+                return false;
+            }
+            else{
+                document.getElementById("s8").innerHTML="";
+            }
+            var a=document.form1.Com.value;
+            if(a=="")
+            {
+                document.getElementById("s9").innerHTML="*Please enter your address";
+                document.form1.Com.focus();
+                return false;
+            }
+            else{
+                document.getElementById("s9").innerHTML="";
+            }
+            if(document.getElementById("COUNTRY").selected)
+            {
+                document.getElementById("s10").innerHTML="Please select your country";
+                return false;
+            }
+            else{
+                document.getElementById("s10").innerHTML="";
+            }
+            var f=document.form1.non.value;
+            if(non=="")
+            {
+                document.getElementById("s11").innerHTML="Please upload your documents"
+                document.form1.non.focus();
+                return false;
+            }
+            else{
+                document.getElementById("s11").innerHTML="";
+            }
+        }
+    </script>
+</body>
+</html>
